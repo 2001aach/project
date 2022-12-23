@@ -1,0 +1,17 @@
+{% extends 'inindexadm.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="card text-center">
+  <div class="card-header">
+    If you need to view User!
+  </div>
+  <div class="card-body">
+<!--    <h5 class="card-title">Special title treatment</h5>-->
+<!--    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>-->
+    <a href="{% url 'view_user' %}" class="btn btn-primary">VIEW</a>
+  </div>
+<!--  <div class="card-footer text-muted">-->
+<!--    2 days ago-->
+<!--  </div>-->
+</div>
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends 'user.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="col-lg-12 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">FEEDBACK VIEW</h4>
+                  <div class="table-responsive">
+                    <table class="table table-striped">
+                      <thead>
+                        <tr>
+                          <th>sl No.</th>
+                          <th>FEEDBACK</th>
+                          <th>DATE</th>
+                          <th>TIME</th>
+                          <th>REPLY</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                      {% for i in data %}
+                        <tr>
+                          <td class="py-1">{{ forloop.counter }}</td>
+                          <td>{{ i.feedback }}</td>
+                          <td>{{ i.date }}</td>
+                          <td>{{ i.time }}</td>
+                          <td>{% if i.replay == None %}
+                            <p>No reply yet</p>
+                            {% else %}
+                            {{i.replay}}
+                            {% endif %}
+                          </td>
+                        </tr>
+                      {% endfor %}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+{% endblock %}

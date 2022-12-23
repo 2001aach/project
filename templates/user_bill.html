@@ -1,0 +1,37 @@
+{% extends 'user.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="col-lg-12 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">SCHEDULE</h4>
+                  <div class="table-responsive">
+                    <table class="table table-striped">
+                      <thead>
+                        <tr>
+                          <th>Sl No</th>
+                          <th>WORKE NAME</th>
+                          <th>CASH</th>
+                          <th>PAYMENT</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                      {% for i in schedule %}
+                        <tr>
+                          <td class="py-1">{{ forloop.counter }}</td>
+                          <td>{{ i.workname }}</td>
+                          <td>{{ i.charge }}</td>
+                          <td>
+                            <a href="{% url 'payment' i.id %}">
+                              <button type="button" class="btn btn-primary">PAYMENT </button>
+                          </a>
+                          </td>
+                        </tr>
+                      {% endfor %}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends 'inindexadm.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="container">
+
+      <div class="card-details">
+        <p>PAYMENT</p>
+
+        <div class="card-number">
+          <label> Card Number </label>
+          <input
+            type="text"
+            class="card-number-field"
+            />
+        </div>
+        <br />
+
+
+        <div class="cvv-number">
+          <label> CVV number </label>
+          <input type="text" class="cvv-number-field"
+                 placeholder="xxx" />
+        </div>
+        <div class="nameholder-number">
+          <label> Card Holder name </label>
+          <input
+            type="text"
+            class="card-name-field"
+            placeholder="Enter your Name"/>
+        </div>
+          {% for i in data %}
+
+          {% if i.status == 0 %}
+          <a type="button" class="btn btn-danger" href="{% url 'paynow' i.id %}">DIRECT PAYMENT</a>
+          <a type="button" class="btn btn-danger" href="{% url 'paybtn' %}">PAY NOW</a>
+          {% else %}
+          <button type="button" class="btn btn-success">BILL PAID</button>
+          {% endif %}
+          {% endfor %}
+      </div>
+    </div>
+{% endblock %}
