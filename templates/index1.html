@@ -11,7 +11,7 @@
     <!-- ===============================================-->
     <!--    Document Title-->
     <!-- ===============================================-->
-    <title>Servion | Landing, Responsive &amp; Business Templatee</title>
+
 
 
     <!-- ===============================================-->
@@ -41,7 +41,11 @@
     <!-- ===============================================-->
     <main class="main" id="top">
       <nav class="navbar navbar-expand-lg navbar-light fixed-top py-4 d-block" data-navbar-on-scroll="data-navbar-on-scroll">
-        <div class="container"><a class="navbar-brand" href="index.html"><img src="{% static 'index/assets/img/gallery/logo.png' %}" height="24" alt="..." /></a>
+        <div class="container">
+            <div class="text-center"><a class="navbar-brand" href="index.html"></a>
+		 		<img src="{% static 'login/assets/images/images_home.png' %}" alt="logo icon" style="width:100px;">
+		 	</div>
+
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"> </span></button>
           <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto pt-2 pt-lg-0 font-base">
@@ -50,7 +54,7 @@
 <!--              <li class="nav-item px-2" data-anchor="data-anchor"><a class="nav-link" href="#pricingTable">Pricing table</a></li>-->
 <!--              <li class="nav-item px-2" data-anchor="data-anchor"><a class="nav-link" href="#help">Help</a></li>-->
             </ul>
-            <form class="ps-lg-5"><a class="btn btn-light order-1 order-lg-0" href="{% url 'loginpage' %}">login
+            <form class="ps-lg-5"><a class="btn btn-light order-1 order-lg-0" href="{% url 'loginpage' %}">Login
                 <svg class="bi bi-person-fill" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
                   <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"></path>
                 </svg></a></form>
@@ -58,16 +62,15 @@
         </div>
       </nav>
       <section id="home">
-        <div class="bg-holder" style="background-image:url({% static 'index/assets/img/gallery/hero.png' %});background-position:center;background-size:cover;">
+        <div class="bg-holder" style="background-image:url({% static 'index/assets/img/gallery/pexels-toni.jpg' %});background-position:center;background-size:cover;">
         </div>
         <!--/.bg-holder-->
 
         <div class="container">
           <div class="row align-items-center min-vh-50 min-vh-sm-75">
-            <div class="col-md-5 col-lg-6 order-0 order-md-1"><img class="w-100" src="{% static 'index/assets/img/illustrations/hero-header.png' %}" alt="..." /></div>
+<!--            <div class="col-md-5 col-lg-6 order-0 order-md-1"><img class="w-100" src="{% static 'index/assets/img/illustrations/' %}"/></div>-->
             <div class="col-md-7 col-lg-6 text-md-start text-center">
-              <h1 class="text-light fs-md-5 fs-lg-6">Online Home Service</h1>
-
+              <h1 class="text-light fs-md-5 fs-lg-6">Make Your Home </h1>
             </div>
           </div>
         </div>

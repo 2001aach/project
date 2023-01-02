@@ -16,8 +16,8 @@
                           <th>ADDRESS</th>
                           <th>WORKTYPE</th>
                           <th>PHOTO</th>
-                          <th>REMOVE</th>
                           <th>UPDATE</th>
+                          <th>REMOVE</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -30,8 +30,8 @@
                           <td>{{ i.address }}</td>
                           <td>{{ i.worktype }}</td>
                           <td><img src="{{i.photo.url }}" style="width:100px"></td>
-                          <td><a href="{% url 'delete_worker' i.id %}" class="btn btn-primary">Delete</a> </td>
                           <td><a href="{% url 'update_worker' i.id %}" class="btn btn-primary">Update</a> </td>
+                          <td><a href="{% url 'delete_worker' i.id %}" class="btn btn-primary">Delete</a> </td>
 
 
 <!

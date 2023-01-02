@@ -26,7 +26,7 @@
                           <td>
                              {% if i.status == 0 %}
                         <a type="button" class="btn btn-danger" href="{% url 'paynow' i.id %}">DIRECT PAYMENT</a>
-                       <a type="button" class="btn btn-danger" href="{% url 'paybtn' %}">PAY NOW</a>
+
                         {% else %}
                         <button type="button" class="btn btn-success">BILL PAID</button>
                         {% endif %}

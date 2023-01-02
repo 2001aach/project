@@ -13,8 +13,9 @@
                           <th>WORK NAME</th>
                           <th>DISCRIPTION</th>
                           <th>CHARGE</th>
-                          <th>REMOVE</th>
                           <th>UPDATE</th>
+                          <th>REMOVE</th>
+
                         </tr>
                       </thead>
                       <tbody>
@@ -24,8 +25,9 @@
                           <td>{{ i.workname }}</td>
                           <td>{{ i.discription }}</td>
                           <td>{{ i.charge }}</td>
-                          <td><a href="{% url 'delete_addwork' i.id %}" class="btn btn-primary">Delete</a> </td>
                           <td><a href="{% url 'update_addwork' i.id %}" class="btn btn-primary">Update</a> </td>
+                          <td><a href="{% url 'delete_addwork' i.id %}" class="btn btn-primary">Delete</a> </td>
+
 
                         </tr>
                       {% endfor %}
