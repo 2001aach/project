@@ -31,7 +31,11 @@
                           <td>{{ i.worktype }}</td>
                           <td><img src="{{i.photo.url }}" style="width:100px"></td>
                           <td><a href="{% url 'update_worker' i.id %}" class="btn btn-primary">Update</a> </td>
-                          <td><a href="{% url 'delete_worker' i.id %}" class="btn btn-primary">Delete</a> </td>
+                         <td><form  action="{% url 'delete_worker' i.id %}" method="post">
+                            {% csrf_token %}
+                          <button type="submit" class="btn btn-primary">Delete</button>
+                          </form>
+                          </td>
 
 
 <!

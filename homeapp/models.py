@@ -61,7 +61,7 @@ class user_appoinment(models.Model):
        return self.name
 
 class feedback(models.Model):
-    user=models.ForeignKey(Login,on_delete=models.DO_NOTHING)
+    user=models.ForeignKey(Login,on_delete=models.CASCADE)
     date=models.DateField()
     time=models.TimeField()
     feedback=models.CharField(max_length=800)
@@ -69,13 +69,13 @@ class feedback(models.Model):
 
 
 class payment(models.Model):
-    user=models.ForeignKey(Login,on_delete=models.DO_NOTHING)
+    user=models.ForeignKey(Login,on_delete=models.CASCADE)
     date = models.DateField()
     time = models.TimeField()
     cash=models.ForeignKey(admin_addwork,on_delete=models.CASCADE)
 
 class admin_payment(models.Model):
-    name = models.ForeignKey(userpage, on_delete=models.DO_NOTHING)
+    name = models.ForeignKey(userpage, on_delete=models.CASCADE)
     amount=models.IntegerField()
     paid_date=models.DateField(auto_now=True)
     bill_date=models.DateField(auto_now=True)

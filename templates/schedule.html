@@ -27,6 +27,11 @@
                           <td>{{ i.start_time }}</td>
                           <td>{{ i.end_time }}</td>
                           <td><a href="{% url 'update_schedule' i.id %}" class="btn btn-primary">Update</a> </td>
+                          <td><form  action="{% url 'delete_schedule' i.id %}" method="post">
+                            {% csrf_token %}
+                          <button type="submit" class="btn btn-primary">Delete</button>
+                          </form>
+                          </td>
                           <td><a href="{% url 'delete_schedule' i.id %}" class="btn btn-primary">Delete</a> </td>
                         </tr>
                       {% endfor %}
